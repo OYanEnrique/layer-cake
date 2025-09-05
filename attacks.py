@@ -112,6 +112,25 @@ ATTACK_LIST = [
     {"attack_name": "Mallow Munch", "base_damage": 2},
 ]
 
+def get_boss_attacks(level, num_attacks=4):
+    """Returns a list of boss attacks if the level is a boss level (multiple of 10)."""
+    boss_attacks = [
+        {"attack_name": "S'moresplosion", "base_damage": 10},
+        {"attack_name": "Chocolate Cyclone", "base_damage": 12},
+        {"attack_name": "Caramel Crush", "base_damage": 11},
+        {"attack_name": "Licorice Lash", "base_damage": 9},
+        {"attack_name": "Bonbon Barrage", "base_damage": 10},
+        {"attack_name": "Truffle Tempest", "base_damage": 12},
+        {"attack_name": "Candy Cannonade", "base_damage": 11},
+        {"attack_name": "Fudge Fury", "base_damage": 10},
+        {"attack_name": "Taffy Tornado", "base_damage": 9},
+        {"attack_name": "Jelly Javelin", "base_damage": 8},
+    ]
+    if level % 10 == 0:
+        return [attack.copy() for attack in random.sample(boss_attacks, num_attacks)]
+    else:
+        return None
+
 def get_random_attacks(num_attacks=2):
     """Selects a number of unique random attacks from the master list."""
     # We return copies to prevent modifying the original ATTACK_LIST

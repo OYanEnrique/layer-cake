@@ -32,6 +32,12 @@ while player_alive:
 		sleep(2)
 		level += 1
 		player['current_hp'] = player['max_hp']
+		if level >=2:
+			# Increase base damage of player's attacks by 10% each level after level 1
+			for attack in player['attacks']:
+				attack['damage'] = int(attack['damage'] + level // 2)
+			print(f'Your candy character {player['name']} feels stronger! Base damage increased to {player['attacks'][0]['damage']} and {player['attacks'][1]['damage']} respectively.')
+			sleep(1)
 
 		# Ask to save game after winning a level
 		save_choice = input('Do you want to save the game? (y/n)\n').lower().strip()[0]
@@ -42,7 +48,10 @@ while player_alive:
 			sleep(2)
 
 		# Friendship chance after winning
-		friendship = randint(3,4)
+		level_check = level - 1
+		friendship = randint(1,4)
+		if level_check % 10 == 0:
+			friendship = randint(1,20) # Lower chance on boss levels
 		if friendship == 4:
 			enemy['current_hp'] = enemy['max_hp']
 			print(f"You and {enemy['name']} share a moment of friendship!")

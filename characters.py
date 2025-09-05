@@ -1,9 +1,10 @@
 from random import choice
-from attacks import get_random_attacks
+from attacks import get_random_attacks, get_boss_attacks
+from time import sleep
 
 def create_enemy(level):
 	
-	enemy_hp = 20 + (level * 5)
+	enemy_hp = 15 + level
 	
 	names = [
 		"Gelatimon", "Chocobite", "Marshmunch", "Gummyfang", "Caramellow", "Fudgester", "Sprinkletooth", "Nougator", "Puffmallow", "Licoricepike",
@@ -28,14 +29,25 @@ def create_enemy(level):
 		"Mini", "Mega", "Ultra", "Hyper", "Super", "Max", "Prime", "Alpha", "Omega", "Beta",
 		"Sweetest", "Sour", "Salty", "Spicy", "Mild", "Bold", "Gentle", "Fierce", "Brave", "Clever"
 	]
-	enemy_name = f"{choice(names)} {choice(adjectives)}"
+	boss_names = [
+		"Lord Licorice", "Queen Caramel", "Duke Doughnut", "Princess Praline", "Baroness Bonbon", "Count Candy", "Emperor Eclair", "King Kandy", "Sir Sugar", "Madame Meringue"
+	]
+	boss_adjectives = [ "The Sour", "The Sweet", "The Spicy", "The Creamy", "The Crunchy", "The Chewy", "The Fluffy", "The Gooey", "The Frosted", "The Glazed"]
 
-	# Get random attacks for the enemy
-	enemy_attacks = get_random_attacks(2)
-
-	# Adjust attack damage based on the enemy's level
-	for attack in enemy_attacks:
-		attack['damage'] = attack['base_damage'] + level
+	if level % 10 == 0:
+		print(f'🎉🎉🎉 Candy Boss Level {level} Reached! 🎉🎉🎉')
+		enemy_name = f"{choice(boss_names)} {choice(boss_adjectives)} Candy"
+		enemy_hp += 20
+		enemy_attacks = get_random_attacks(2)
+		for attack in enemy_attacks:
+			attack['damage'] = int(attack['base_damage'] + level)
+		print(f'Whoa! {enemy_name} looks tough! Its attacks deal {enemy_attacks[0]['damage']} and {enemy_attacks[1]['damage']} damage respectively.')
+		sleep(1)
+	else:
+		enemy_name = f"{choice(names)} {choice(adjectives)}"
+		enemy_attacks = get_random_attacks(2)
+		for attack in enemy_attacks:
+			attack['damage'] = attack['base_damage'] * (level // 2)
 
 	new_enemy = {
 		"name": enemy_name,
