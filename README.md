@@ -2,11 +2,11 @@
 
 Welcome to **Candy Mayhem**, a turn-based text RPG where you battle, and befriend the wildest candy creatures in a world made entirely of sweets! Get ready for a sugar rush of fun, strategy, and creativity.
 
-## 🍥 What's New in v1.1.0
-- **Boss Battles**: Every 10 levels, face a mighty candy boss with unique attacks and extra HP!
-- **Special Boss Attacks**: Bosses now use exclusive, high-damage moves for a real sugar rush.
-- **Balanced Gameplay**: Damage scaling and friendship chances tweaked for sweeter progression.
-- **Improved Experience**: More fun messages, better feedback, and bug fixes.
+## 🍬 What's New in v1.2.0
+- **Colorful Battles, Clean Names:** Enemy names are now saved without color tags, but shine bright in the terminal thanks to rich magic!
+- **Player Naming Fixed:** Your candy hero finally gets the name you choose—no more mysterious 'None' or fruit surprises!
+- **Bug Fixes & Polish:** Indentation errors squashed, code blocks tidied, and gameplay smoother than marshmallow fluff.
+- **Documentation Improved:** Comments and code are easier to read, so you can focus on the sugar rush.
 
 ## 🎮 Game Features
 - **100+ Unique Candy Creatures**: From Gelatimon to Chocobite, every battle brings a new sugary friend or foe.
@@ -19,6 +19,8 @@ Welcome to **Candy Mayhem**, a turn-based text RPG where you battle, and befrien
 - **Dynamic Damage Scaling**: Both enemies and bosses get stronger as you progress.
 - **Enhanced Friendship System**: Befriend even the toughest bosses (if you're lucky)!
 - **Improved Visual Feedback**: Themed messages and effects for boss encounters.
+- **Colorful Terminal Output**: All colors are now applied only when printing, keeping your save files clean and readable.
+- **Player Name Assignment**: Your chosen name is always used for your candy hero.
 
 ## 🚀 How to Play
 1. **Start the game**: Run `python main.py` in your terminal.
