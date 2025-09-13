@@ -2,11 +2,16 @@
 
 Welcome to **Candy Mayhem**, a turn-based text RPG where you battle, and befriend the wildest candy creatures in a world made entirely of sweets! Get ready for a sugar rush of fun, strategy, and creativity.
 
-## 🍬 What's New in v1.2.0
-- **Colorful Battles, Clean Names:** Enemy names are now saved without color tags, but shine bright in the terminal thanks to rich magic!
-- **Player Naming Fixed:** Your candy hero finally gets the name you choose—no more mysterious 'None' or fruit surprises!
-- **Bug Fixes & Polish:** Indentation errors squashed, code blocks tidied, and gameplay smoother than marshmallow fluff.
-- **Documentation Improved:** Comments and code are easier to read, so you can focus on the sugar rush.
+## 🍬 v1.3.0 Sweetest Update Ever!
+**What's new in this release:**
+
+- **50 new unique candy-themed enemies**: From "Nougat Ninja" to "Marshmallow Marauder"—no repeats, all deliciously dangerous!
+- **50 new candy bosses**: Face off against confectionery overlords like "Licorice Leviathan" and "Sugar Sultan".
+- **50 new regular adjectives**: Every enemy now has a unique candy-flavored personality.
+- **50 new boss adjectives**: Bosses are even more epic, with rare and powerful descriptors.
+- **Miss chance mechanic**: Attacks from both player and enemies can now miss! Adds a new layer of strategy and suspense to every battle.
+
+All new content is 100% unique and keeps the candy theme strong. Gameplay is now sweeter, funnier, and more unpredictable than ever!
 
 ## 🎮 Game Features
 - **100+ Unique Candy Creatures**: From Gelatimon to Chocobite, every battle brings a new sugary friend or foe.
